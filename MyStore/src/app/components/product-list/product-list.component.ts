@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { ProductService} from '../../product.service';
-
-export type Product = {
-	id?: number;
-	name: string;
-	price: number;
-	url: string;
-	description: string;
-};
+import { ProductService, Product} from '../../product.service';
+import { CartService, CartItem } from '../../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -19,7 +12,7 @@ export type Product = {
 export class ProductListComponent implements OnInit {
 	productlist: Product[] = [];
 
-  constructor(private productService: ProductService) { 
+  constructor(private productService: ProductService, private cartService: CartService) { 
   }
 
   ngOnInit(): void {
@@ -27,6 +20,4 @@ export class ProductListComponent implements OnInit {
 		  this.productlist = data;
 	  })
   }
-
-
 }

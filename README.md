@@ -20,4 +20,6 @@
 ## Fetch and use data from an external API
 	- product service uses HttpClient to read data from provided data.json in src/assets
 	- *ngFor loops over products in product-list component, using products component to control the output
-	
+	- product list shows photo, name, and price.
+
+## Create a logical heirarchy of components

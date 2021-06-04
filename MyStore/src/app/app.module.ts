@@ -16,6 +16,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 //HTTP Client module for reading local JSON file
 import { HttpClientModule } from '@angular/common/http';
 
+//Bootstrap 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+//Forms
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
 	FlexLayoutModule,
-	HttpClientModule
+	HttpClientModule,
+	NgbModule,
+	FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

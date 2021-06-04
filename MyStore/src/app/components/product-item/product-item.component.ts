@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../product-list/product-list.component'
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Product } from '../../product.service';
+import { CartService, CartItem } from '../../cart.service';
+
 
 @Component({
   selector: 'app-product-item',
@@ -8,8 +10,9 @@ import { Product } from '../product-list/product-list.component'
 })
 export class ProductItemComponent implements OnInit {
 	@Input() product: Product;
+	@Input() quantity: number;
 
-  constructor() {
+  constructor(private cartService: CartService) {
 	this.product = {
 		id: 0,
 		name: '',
@@ -17,9 +20,15 @@ export class ProductItemComponent implements OnInit {
 		url: '',
 		description: ''
 	}
+	this.quantity = 0;
    }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(product: Product, quantity: number): void {
+	  const cartItem: CartItem = {product, quantity}
+	  this.cartService.addToCart(cartItem);
   }
 
 }

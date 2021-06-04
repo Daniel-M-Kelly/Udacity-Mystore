@@ -1,1 +1,8 @@
-<p>cart works!</p>
+<h1>Cart</h1>
+
+<body >
+<ul *ngFor='let cartItem of cartContents'>
+	<li>{{cartItem.product.name}}</li>
+	<li>{{cartItem.quantity}}</li>
+</ul>
+</body>
