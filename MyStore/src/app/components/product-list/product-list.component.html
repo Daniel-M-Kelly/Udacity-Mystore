@@ -1,4 +1,4 @@
 <h1>List of Products</h1>
-<body class='product-index'>
-	<app-product-item *ngFor="let product of productlist" [product]="product" class='product-container'></app-product-item>
+<body ngClass='product-index'>
+	<app-product-item *ngFor="let product of productlist" [product]="product" ngClass='product-container'></app-product-item>
 </body>

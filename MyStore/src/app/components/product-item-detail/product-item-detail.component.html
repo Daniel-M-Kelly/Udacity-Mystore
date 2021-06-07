@@ -1,1 +1,13 @@
-<p>product-item-detail works!</p>
+<div ngClass='detail-container'>
+	<img ngClass='img' src={{product.url}} >
+	<div ngClass='detail-item'>
+	<br>{{product.name}}
+	<br>{{product.price}}
+	<br>{{product.description}}
+	<form (ngSubmit)='onSubmit(product, cartItem.quantity)'>
+		<input type='number' name='quantity' [(ngModel)]='cartItem.quantity'>
+		<br><button type='submit'> Add To Cart</button>
+	</form>
+	<a routerLink = '/' ngClass = '.back-link'>Back to product list</a>
+	</div>
+	</div>

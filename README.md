@@ -23,3 +23,16 @@
 	- product list shows photo, name, and price.
 
 ## Create a logical heirarchy of components
+
+# Data Flow
+## Use decorators to pass data between parent and child components
+## Use a service to pass data between sibling components
+	- Product service imports list of products from the supplied JSON file.
+	- Cart service stores cart data and enables sharing with product-item
+# Routing
+## Use Angular routing in templates
+	- `<router-outlet>` added to app.component.html
+	- `routerLink` used in product-item component and header component
+## Set up and configure the app routing module
+	- Imported AppRoutingModule to app.module.ts
+	- Added paths and component routes to app-routing.module

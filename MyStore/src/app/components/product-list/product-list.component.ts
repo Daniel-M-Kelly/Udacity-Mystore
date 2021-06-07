@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
 import { ProductService, Product} from '../../product.service';
 import { CartService, CartItem } from '../../cart.service';
 
@@ -18,6 +17,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
 	 this.productService.getProducts().subscribe(data => {
 		  this.productlist = data;
-	  })
+	  }) 
+	
+
   }
 }
