@@ -14,13 +14,7 @@ export class ProductItemComponent implements OnInit {
 	@Input() quantity: number;
 
   constructor(private cartService: CartService) {
-	this.product = {
-		id: 0,
-		name: '',
-		price: 0,
-		url: '',
-		description: ''
-	}
+	this.product = new Product;
 	this.quantity = 0;
    }
 

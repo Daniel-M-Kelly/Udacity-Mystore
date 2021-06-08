@@ -20,4 +20,10 @@ export class CartService {
 		this.cartContents.push(cartItem);
 		return this.cartContents;
 	}
+
+	removeFromCart(cartItem: CartItem): CartItem[] {
+		this.cartContents = this.cartContents.filter(item => item.product.id != cartItem.product.id);
+		return this.cartContents;
+	}
+	
 }

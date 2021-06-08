@@ -7,22 +7,23 @@
 		
 			<li>{{cartItem.product.name}}</li>
 			<li>{{cartItem.product.price}}</li>
-			<li class='number-input'>{{cartItem.quantity}}</li>
+			<input [(ngModel)]='cartItem.quantity' (change)='onChange(cartItem)' type=number class='number-input' > 
+				
 		
 		</ul>
-		<p>Total: ${{cartTotal.toFixed(2)}}</p>
+		<p>Total: ${{cartTotal}}</p>
 	</div>
 	</div>
 <div class='cart-panel'>
-<form class='form-margin'>
+<form class='form-margin' (ngSubmit)='onSubmit(order.fullName, order.address, order.ccNum, cartContents, cartTotal)'>
 	<p>Full Name
-	<br><input type='text' name='fullName' placeholder='(minimum 3 characters)'>
+	<br><input [(ngModel)]='order.fullName' type='text' name='fullName' placeholder='(minimum 3 characters)'>
 </p>
 	<p>Address
-	<br><input type='text' name='address' placeholder='(minimum 6 characters)'>
+	<br><input [(ngModel)]='order.address' type='text' name='address' placeholder='(minimum 6 characters)'>
 </p>
 	<p>Credit Card Number
-	<br><input type='number' name='creditCard' placeholder='16-digit number'>
+	<br><input [(ngModel)]='order.ccNum' type='number' name='creditCard' placeholder='16-digit number'>
 </p>
 	<button type='submit'>Submit</button>
 </form>
