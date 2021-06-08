@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.service';
-
-export type CartItem = {
-	product: Product,
-	quantity: number
-}
-
+import { Product } from './models/product';
+import { CartItem } from './models/cartItem';
 
 @Injectable({
 	providedIn: 'root'
