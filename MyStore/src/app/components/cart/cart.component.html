@@ -1,20 +1,20 @@
-<h1>Cart</h1>
-<body ngClass='cart-container'>
-	<div ngClass='cart-item'>
-		<div ngClass='cart-item-details'>
+<h1 *ngIf=(!cartContents.length) class='empty-cart-message'>Cart Is Empty!</h1>
+<body *ngIf=(cartContents.length) class='cart-container'>
+	<div class='cart-item'>
+		<div class='cart-item-details'>
 		<ul *ngFor='let cartItem of cartContents' >
-		<img src={{cartItem.product.url}} ngClass='img'>
+		<img src={{cartItem.product.url}} class='img'>
 		
 			<li>{{cartItem.product.name}}</li>
 			<li>{{cartItem.product.price}}</li>
-			<li ngClass='number-input'>{{cartItem.quantity}}</li>
+			<li class='number-input'>{{cartItem.quantity}}</li>
 		
 		</ul>
 		<p>Total: ${{cartTotal.toFixed(2)}}</p>
 	</div>
 	</div>
-<div ngClass='cart-panel'>
-<form ngClass='form-margin'>
+<div class='cart-panel'>
+<form class='form-margin'>
 	<p>Full Name
 	<br><input type='text' name='fullName' placeholder='(minimum 3 characters)'>
 </p>
