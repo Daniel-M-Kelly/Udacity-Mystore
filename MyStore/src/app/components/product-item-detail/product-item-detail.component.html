@@ -4,10 +4,10 @@
 	<br>{{product.name}}
 	<br>{{product.price}}
 	<br>{{product.description}}
-	<form (ngSubmit)='onSubmit(product, cartItem.quantity)'>
-		<input type='number' name='quantity' [(ngModel)]='cartItem.quantity'>
-		<br><button type='submit'> Add To Cart</button>
+	<form #detailForm='ngForm' (ngSubmit)='onSubmit(product, cartItem.quantity)'>
+		<input type='number' name='quantity' [(ngModel)]='cartItem.quantity' min='1' required>
+		<br><button type='submit' class="btn btn-primary btn-lg" [disabled]="detailForm.invalid"> Add To Cart</button>
 	</form>
-	<button routerLink = '/' class = '.back-link'>Back to product list</button>
+	<button routerLink = '/' class = '.back-link btn btn-primary'>Back to product list</button>
 	</div>
 	</div>

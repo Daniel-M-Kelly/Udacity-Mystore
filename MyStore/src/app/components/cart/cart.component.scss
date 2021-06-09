@@ -39,7 +39,14 @@ img {
   }
   
   .empty-cart-message {
+
+	justify-content: center;
+	text-align: center;
+	margin-top: 64px;
+  }
+
+  .back-button {
 	display: flex;
 	justify-content: center;
-	margin-top: 64px;
+	align-items: center;
   }

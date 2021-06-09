@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
   }
 
   onChange(cartItem: CartItem): void {
-	if (cartItem.quantity == 0) {
+	if (cartItem.quantity <= 0) {
 		alert(`Item Removed from Cart`);
 		this.cartContents = this.cartService.removeFromCart(cartItem);
 		this.cartSum();
