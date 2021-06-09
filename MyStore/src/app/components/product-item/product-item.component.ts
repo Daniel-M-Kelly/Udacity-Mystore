@@ -12,18 +12,21 @@ import { CartItem } from '../../models/cartItem';
 export class ProductItemComponent implements OnInit {
 	@Input() product: Product;
 	@Input() quantity: number;
+	@Output() added = new EventEmitter();
 
   constructor(private cartService: CartService) {
 	this.product = new Product;
 	this.quantity = 0;
+
    }
 
   ngOnInit(): void {
   }
 
-  onSubmit(product: Product, quantity: number): void {
+  /* onSubmit(product: Product, quantity: number): void {
 	  const cartItem: CartItem = {product, quantity}
 	  this.cartService.addToCart(cartItem);
-  }
+  } */
+
 
 }
