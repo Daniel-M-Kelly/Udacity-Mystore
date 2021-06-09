@@ -11,7 +11,8 @@
 		
 			<li>{{cartItem.product.name}}</li>
 			<li>{{cartItem.product.price}}</li>
-			<input [(ngModel)]='cartItem.quantity' (change)='onChange(cartItem)' type=number class='number-input' required min='0' > 
+			<!-- <input [(ngModel)]='cartItem.quantity' (change)='onChange(cartItem)' type=number class='number-input' required min='0' > -->
+			<input [(ngModel)]='cartItem.quantity' (ngModelChange)='onChange(cartItem)' type=number class='number-input' required min='0' > 
 				
 		
 		</ul>
