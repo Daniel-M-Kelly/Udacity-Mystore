@@ -3,14 +3,14 @@ import { CartItem } from './cartItem';
 export class Order {
 	fullName: string;
 	address: string;
-	ccNum: number;
+	ccNum: string;
 	total: number;
 	cart: CartItem[];
 
 	constructor() {
 		this.fullName = '';
 		this.address = '';
-		this.ccNum = 0;
+		this.ccNum = '';
 		this.total = 0;
 		this.cart = [{ 
 				product: {

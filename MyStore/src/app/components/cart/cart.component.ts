@@ -39,7 +39,7 @@ export class CartComponent implements OnInit {
 	}
   } 
 
-  onSubmit(fullName: string, address: string, ccNum: number, cartContents: CartItem[], cartTotal: number): void {
+  onSubmit(fullName: string, address: string, ccNum: string, cartContents: CartItem[], cartTotal: number): void {
 	  this.order = {fullName: fullName, address: address, ccNum: ccNum, total: cartTotal, cart: cartContents};
 	  this.orderService.addOrder(this.order);
 	  this.router.navigate(['/confirmation']);
