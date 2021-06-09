@@ -18,4 +18,7 @@ export class OrderService {
 	  this.orderContents = order;
   }
 
+  clearOrder(): void {
+	  this.orderContents = new Order;
+  }
 }

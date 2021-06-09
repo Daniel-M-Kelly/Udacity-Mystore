@@ -26,4 +26,7 @@ export class CartService {
 		return this.cartContents;
 	}
 	
+	clearCart():void{
+		this.cartContents = [];
+	}
 }
