@@ -27,7 +27,7 @@
 	<br><input [(ngModel)]='order.address' type='text' name='address' placeholder='(minimum 6 characters)' required minlength='6'>
 </p>
 	<p>Credit Card Number
-	<br><input [(ngModel)]='order.ccNum' type='text' name='creditCard' placeholder='16-digit number' required minlength='16'>
+	<br><input [(ngModel)]='order.ccNum' type='text'  pattern="\d*" name='creditCard' placeholder='16-digit number' required minlength='16' >
 </p>
 	<button type='submit' class='btn btn-outline-primary btn-lg' [disabled]="cartform.invalid" >Submit</button>
 </form>

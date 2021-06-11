@@ -10,6 +10,7 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HeaderComponent } from './layout/header/header.component';
 
+
 //Flexbox CSS for Angular
 import { FlexLayoutModule } from '@angular/flex-layout';
 
