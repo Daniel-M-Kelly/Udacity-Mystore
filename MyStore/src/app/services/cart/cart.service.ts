@@ -16,8 +16,18 @@ export class CartService {
 	}
 
 	addToCart(cartItem: CartItem): CartItem[]{
-		alert(`${cartItem.quantity} ${cartItem.product.name} has been added to the cart!`);
-		this.cartContents.push(cartItem);
+		if (this.cartContents.length) {
+			if (this.cartContents.some(item => item['product']['id'] === cartItem['product']['id'])) {
+				alert(`${cartItem.product.name} is already in cart.`);
+			}
+			else {
+				alert(`${cartItem.quantity} ${cartItem.product.name} has been added to the cart with items in it!`);
+					this.cartContents.push(cartItem);
+					}
+		} else {
+			alert(`${cartItem.quantity} ${cartItem.product.name} has been added to the empty cart!`);
+			this.cartContents.push(cartItem);
+		}
 		return this.cartContents;
 	}
 
